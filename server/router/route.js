@@ -5,8 +5,8 @@ const router = Router();
 import * as controller from '../controllers/appController.js';
 import Auth, {localVariables} from "../middleware/auth.js";
 import {registerMail} from '../controllers/mailer.js';
-
-//--Post Methods--
+ 
+//--Post Methods-- 
 router.route('/register').post(controller.register);  //register user
 router.route('/registerMail').post(registerMail); //send the email
 
@@ -26,4 +26,4 @@ router.route('/createResetSession').get(controller.createResetSession) //reset a
 router.route('/updateuser').put(controller.updateUser); //is use to update the user fpofile
 router.route('/resetPassword').put(controller.verifyUser, controller.resetPassword); //use to reset password
 
-export default router;
+export default router;                

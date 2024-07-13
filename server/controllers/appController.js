@@ -210,7 +210,7 @@ export async function verifyOTP(req, res) {
 
 
 // successfully redirect user when OTP is valid
-/** GET: http://localhost:8080/api/createResetSession */
+/** GET: http://localhost:8000/api/createResetSession */
 export async function createResetSession(req, res) {
     if (req.app.locals.resetSession) {
         req.app.locals.resetSession = false; //allow access to this route only once
